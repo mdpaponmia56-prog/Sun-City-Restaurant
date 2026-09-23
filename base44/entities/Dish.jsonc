@@ -1,0 +1,133 @@
+{
+  "name": "Dish",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Dish Name"
+    },
+    "name_bn": {
+      "type": "string",
+      "title": "Dish Name (Bangla)"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Appetizers",
+        "Biryani & Rice",
+        "Curries",
+        "Kebabs & Grills",
+        "Seafood",
+        "Thai & Chinese",
+        "Desserts",
+        "Beverages",
+        "Breads",
+        "Salads"
+      ],
+      "title": "Category"
+    },
+    "description": {
+      "type": "string",
+      "title": "Description"
+    },
+    "description_bn": {
+      "type": "string",
+      "title": "Description (Bangla)"
+    },
+    "price": {
+      "type": "number",
+      "title": "Price (BDT)"
+    },
+    "image_url": {
+      "type": "string",
+      "format": "uri",
+      "title": "Image URL"
+    },
+    "gallery": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "title": "Gallery Images"
+    },
+    "spice_level": {
+      "type": "string",
+      "enum": [
+        "Mild",
+        "Medium",
+        "Hot",
+        "Extra Hot"
+      ],
+      "title": "Spice Level",
+      "default": "Mild"
+    },
+    "is_vegetarian": {
+      "type": "boolean",
+      "title": "Vegetarian",
+      "default": false
+    },
+    "is_vegan": {
+      "type": "boolean",
+      "title": "Vegan",
+      "default": false
+    },
+    "is_gluten_free": {
+      "type": "boolean",
+      "title": "Gluten Free",
+      "default": false
+    },
+    "is_popular": {
+      "type": "boolean",
+      "title": "Popular",
+      "default": false
+    },
+    "is_chef_recommendation": {
+      "type": "boolean",
+      "title": "Chef's Recommendation",
+      "default": false
+    },
+    "is_signature": {
+      "type": "boolean",
+      "title": "Signature Dish",
+      "default": false
+    },
+    "ingredients": {
+      "type": "string",
+      "title": "Ingredients"
+    },
+    "nutrition": {
+      "type": "string",
+      "title": "Nutrition Info"
+    },
+    "allergens": {
+      "type": "string",
+      "title": "Allergens"
+    },
+    "add_ons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          }
+        }
+      },
+      "title": "Add-ons"
+    },
+    "sort_order": {
+      "type": "number",
+      "title": "Sort Order",
+      "default": 0
+    }
+  },
+  "required": [
+    "name",
+    "category",
+    "price"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "name": "Review",
+  "type": "object",
+  "properties": {
+    "author_name": {
+      "type": "string",
+      "title": "Author Name"
+    },
+    "rating": {
+      "type": "number",
+      "title": "Rating (1-5)",
+      "default": 5
+    },
+    "title": {
+      "type": "string",
+      "title": "Review Title"
+    },
+    "body": {
+      "type": "string",
+      "title": "Review Body"
+    },
+    "photos": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "title": "Review Photos"
+    },
+    "dish_name": {
+      "type": "string",
+      "title": "Dish Name (optional)"
+    },
+    "is_verified": {
+      "type": "boolean",
+      "title": "Verified",
+      "default": false
+    },
+    "is_approved": {
+      "type": "boolean",
+      "title": "Approved",
+      "default": false
+    }
+  },
+  "required": [
+    "author_name",
+    "rating",
+    "body"
+  ]
+}

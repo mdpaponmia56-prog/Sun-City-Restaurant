@@ -1,0 +1,65 @@
+{
+  "name": "Reservation",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Guest Name"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "title": "Email"
+    },
+    "phone": {
+      "type": "string",
+      "title": "Phone"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "title": "Date"
+    },
+    "time": {
+      "type": "string",
+      "title": "Time"
+    },
+    "guests": {
+      "type": "number",
+      "title": "Number of Guests",
+      "default": 2
+    },
+    "seating": {
+      "type": "string",
+      "enum": [
+        "Indoor Luxury",
+        "Window View",
+        "Private Dining"
+      ],
+      "title": "Seating Preference",
+      "default": "Window View"
+    },
+    "special_requests": {
+      "type": "string",
+      "title": "Special Requests"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "confirmed",
+        "cancelled",
+        "completed"
+      ],
+      "title": "Status",
+      "default": "pending"
+    }
+  },
+  "required": [
+    "name",
+    "phone",
+    "date",
+    "time",
+    "guests"
+  ]
+}
